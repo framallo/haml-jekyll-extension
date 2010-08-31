@@ -26,9 +26,6 @@ module Jekyll
 
     def convert(content)
       setup
-      #require 'ruby-debug'
-      #debugger
-      a = 'a'
       options = @config[:haml] || {} 
 
       begin
@@ -38,15 +35,16 @@ module Jekyll
           puts engine.precompiled
           puts '=' * 100
         end
-
-        result = engine.render
+        return result = engine.render
       rescue Exception => e
-        raise e if options[:trace]
-
+        #raise e if options[:trace]
         case e
-        when ::Haml::SyntaxError; raise "Syntax error on line #{get_line e}: #{e.message}"
-        when ::Haml::Error;       raise "Haml error on line #{get_line e}: #{e.message}"
-        else raise "Exception on line #{get_line e}: #{e.message}\n  Use --trace for backtrace."
+        when ::Haml::SyntaxError
+          puts "Syntax error on line #{get_line e}: #{e.message}"
+        when ::Haml::Error
+          puts "Haml error on line #{get_line e}: #{e.message}"
+        else 
+          puts "Exception on line #{get_line e}: #{e.message}\n  Use --trace for backtrace."
         end
       end # begin
     end # convert
