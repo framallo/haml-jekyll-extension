@@ -1,8 +1,6 @@
-Haml Jekyll Extension generate html files from your layouts, sites, post and pages 
-in HAML with support for liquid syntax
+Haml Jekyll Extension generate html files from your layouts, sites, post and pages in HAML with support for liquid syntax
 
-This use the extension "jekyll_ext":http://github.com/rfelix/jekyll_ext.git which allows you 
-to extend the Jekyll static blog generator without forking and modifying it’s codebase. 
+This use the extension "jekyll_ext":http://github.com/rfelix/jekyll_ext.git which allows you to extend the Jekyll static blog generator without forking and modifying it’s codebase. 
 
 
 
