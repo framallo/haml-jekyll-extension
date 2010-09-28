@@ -21,6 +21,11 @@ Instead of using the jekyll command, you should now use ejekyll instead (which i
 jekyll wrapper that loads your extensions).
 
 
+h2. WARNING
+
+auto setting doesn't allow to show haml syntax errors. if you find any issues with this you should disable auto setting
+
+
 h1. Thanks
 
 To codegram for "HAML Jekyll Extension":http://github.com/codegram/haml-jekyll-extension
